@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       Footer
       <WhiteLogo />
-      one app
+      one app next ui
     </div>
   );
 };
