@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
+import { Button } from "@nextui-org/button";
+import { HeartIcon } from "./icons";
 
 export default function Cardcomponent() {
   const list = [
@@ -47,6 +49,8 @@ export default function Cardcomponent() {
     },
   ];
 
+  const [liked, setLiked] = React.useState(false);
+
   return (
     <div className='gap-2 grid grid-cols-2 sm:grid-cols-4'>
       {list.map((item, index) => (
@@ -55,6 +59,10 @@ export default function Cardcomponent() {
           key={index}
           isPressable
           onPress={() => console.log("item pressed")}>
+          <CardHeader className='absolute z-10 top-1 flex-col items-start'>
+            <p className='text-tiny text-white/60 uppercase font-bold'>New</p>
+            <h4 className='text-black font-medium text-2xl'>Acme camera</h4>
+          </CardHeader>
           <CardBody className='overflow-visible p-0'>
             <Image
               shadow='sm'
@@ -68,6 +76,18 @@ export default function Cardcomponent() {
           <CardFooter className='text-small justify-between'>
             <b>{item.title}</b>
             <p className='text-default-500'>{item.price}</p>
+            <Button
+              isIconOnly
+              className='text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2'
+              radius='full'
+              variant='light'
+              onPress={() => setLiked((v) => !v)}>
+              <HeartIcon
+                key={index}
+                className={liked ? "[&>path]:stroke-transparent" : ""}
+                fill={liked ? "currentColor" : "none"}
+              />
+            </Button>
           </CardFooter>
         </Card>
       ))}
