@@ -6,6 +6,7 @@ const Footer = () => {
     <div>
       Footer
       <WhiteLogo />
+      one app
     </div>
   );
 };
