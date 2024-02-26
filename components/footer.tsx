@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       Footer
       <WhiteLogo />
-      one app next ui
+      one app next ui testing
     </div>
   );
 };
