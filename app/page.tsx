@@ -1,17 +1,14 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+"use client";
 import Cardcomponent from "@/components/card";
+import Map from "@/components/map";
 
 export default function Home() {
   return (
     <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
-      <div className='inline-block max-w-lg text-center justify-center'>
-        map
+      <div
+        id='mapContainer'
+        className='inline-block max-w-lg text-center justify-center'>
+        <Map longitude={0} latitude={0} zoom={0} />
       </div>
       <div>
         <Cardcomponent />
