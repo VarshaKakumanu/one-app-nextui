@@ -100,6 +100,7 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
+      
     </NextUINavbar>
   );
 };
