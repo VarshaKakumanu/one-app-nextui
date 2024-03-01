@@ -21,6 +21,7 @@ import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
+import { Avatar } from "@nextui-org/avatar";
 
 export const Navbar = () => {
   const searchInput = (
@@ -72,6 +73,9 @@ export const Navbar = () => {
         <NavbarItem className='hidden sm:flex gap-2'>
           <ThemeSwitch />
         </NavbarItem>
+        <NavbarItem>
+          <Avatar name='Adhi' />
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className='sm:hidden basis-1 pl-4' justify='end'>
@@ -100,7 +104,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-      
     </NextUINavbar>
   );
 };
