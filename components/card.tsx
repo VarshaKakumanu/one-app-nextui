@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
-import { HeartIcon } from "./icons";
+import { HeartIcon, NavigationIcon } from "./icons";
 import { Chip } from "@nextui-org/chip";
 
 export default function Cardcomponent() {
@@ -53,24 +53,23 @@ export default function Cardcomponent() {
   const [liked, setLiked] = React.useState(false);
 
   return (
-    <div className='gap-2 grid grid-cols-2 sm:grid-cols-4'>
+    <div className='gap-3 grid grid-cols-2 sm:grid-cols-4'>
       {list.map((item, index) => (
         <Card
           shadow='sm'
           key={index}
           isPressable
           onPress={() => console.log("item pressed")}>
-          <CardHeader className='absolute z-20 top-1 flex justify-around'>
+          <CardHeader className='absolute z-20 -top-2 right-1 flex justify-between '>
             <Chip radius='sm'>Acme camera</Chip>
 
             <Button
               isIconOnly
-              className='text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2'
+              className='data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2 mt-3'
               radius='full'
               variant='faded'
               onPress={() => setLiked((v) => !v)}>
               <HeartIcon
-                key={index}
                 className={liked ? "[&>path]:stroke-transparent" : ""}
                 fill={liked ? "currentColor" : "none"}
               />
@@ -82,13 +81,23 @@ export default function Cardcomponent() {
               radius='lg'
               width='100%'
               alt={item.title}
-              className='w-full object-cover h-[140px] bg-red-200'
+              className='w-full object-cover h-[140px]'
               src='/mocks/mock1.jpeg'
             />
           </CardBody>
-          <CardFooter className='text-small justify-between'>
-            <b>{item.title}</b>
-            <p className='text-default-500'>{item.price}</p>
+          <CardFooter className='text-small grid grid-cols-2 grid-flow-rows justify-start gap-1.5'>
+            <p className='flex justify-start items-center'>
+              <b>{item.title}</b>
+            </p>
+            <p className='flex justify-end items-center'>
+              <NavigationIcon />
+              0.7min
+            </p>
+            <p className='flex text-default-500 justify-start items-center'>
+              {item.price}
+            </p>
+
+            <p className='flex justify-end items-center'>322337</p>
           </CardFooter>
         </Card>
       ))}
