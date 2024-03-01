@@ -75,13 +75,13 @@ export default function Cardcomponent() {
               />
             </Button>
           </CardHeader>
-          <CardBody className='overflow-visible p-0'>
+          <CardBody className='overflow-visible p-0 '>
             <Image
               shadow='sm'
               radius='lg'
               width='100%'
               alt={item.title}
-              className='w-full object-cover h-[140px]'
+              className='w-full object-cover h-[140px] rounded-b-none'
               src='/mocks/mock1.jpeg'
             />
           </CardBody>

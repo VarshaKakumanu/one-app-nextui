@@ -3,7 +3,7 @@ import { WhiteLogo } from "./icons";
 
 const Footer = () => {
   return (
-    <div className='flex justify-around w-full p-6'>
+    <div className='flex justify-between w-full p-6'>
       <div className='flex flex-col gap-2'>
         <p className='flex gap-1'>
           <WhiteLogo />
@@ -13,7 +13,7 @@ const Footer = () => {
           Copyright 2024 @ OneApp Housing
         </p>
       </div>
-      <div className='text-xs font-extralight flex gap-2'>
+      <div className='text-xs font-extralight flex items-center gap-2'>
         <p>privacy</p>
         <p>privacy</p>
         <p>privacy</p>
