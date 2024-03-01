@@ -9,7 +9,9 @@ const Footer = () => {
           <WhiteLogo />
           OneApp Housing
         </p>
-        <p className='text-xs font-extralight'>Copyright 2024 OneApp Housing</p>
+        <p className='text-xs font-extralight'>
+          Copyright 2024 @ OneApp Housing
+        </p>
       </div>
       <div className='text-xs font-extralight flex gap-2'>
         <p>privacy</p>

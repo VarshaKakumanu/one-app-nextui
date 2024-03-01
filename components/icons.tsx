@@ -141,39 +141,50 @@ export const HeartIcon: React.FC<IconSvgProps> = ({
   strokeWidth = 1.5,
   fill = "none",
   ...props
-}) => (
-  // <svg
-  //   aria-hidden='true'
-  //   fill={fill}
-  //   focusable='false'
-  //   height={size || height}
-  //   role='presentation'
-  //   viewBox='0 0 24 24'
-  //   width={size || width}
-  //   {...props}>
-  //   <path
-  //     d='M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z'
-  //     stroke='currentColor'
-  //     strokeLinecap='round'
-  //     strokeLinejoin='round'
-  //     strokeWidth={strokeWidth}
-  //   />
-  // </svg>
-  <svg
-    width={size || width}
-    height={size || height}
-    viewBox='0 0 15 15'
-    fill={fill}
-    focusable='false'
-    xmlns='http://www.w3.org/2000/svg'
-    {...props}>
-    <path
-      d='M3 2.5C3 2.22386 3.22386 2 3.5 2H11.5C11.7761 2 12 2.22386 12 2.5V13.5C12 13.6818 11.9014 13.8492 11.7424 13.9373C11.5834 14.0254 11.3891 14.0203 11.235 13.924L7.5 11.5896L3.765 13.924C3.61087 14.0203 3.41659 14.0254 3.25762 13.9373C3.09864 13.8492 3 13.6818 3 13.5V2.5ZM4 3V12.5979L6.97 10.7416C7.29427 10.539 7.70573 10.539 8.03 10.7416L11 12.5979V3H4Z'
-      fill='currentColor'
-      fill-rule='evenodd'
-      clip-rule='evenodd'></path>
-  </svg>
-);
+}) => {
+  return (
+    <svg
+      aria-hidden='true'
+      width={size || width}
+      height='18'
+      viewBox='0 0 15 15'
+      fill={fill}
+      role='presentation'
+      focusable='false'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}>
+      <path
+        d='M3 2.5C3 2.22386 3.22386 2 3.5 2H11.5C11.7761 2 12 2.22386 12 2.5V13.5C12 13.6818 11.9014 13.8492 11.7424 13.9373C11.5834 14.0254 11.3891 14.0203 11.235 13.924L7.5 11.5896L3.765 13.924C3.61087 14.0203 3.41659 14.0254 3.25762 13.9373C3.09864 13.8492 3 13.6818 3 13.5V2.5ZM4 3V12.5979L6.97 10.7416C7.29427 10.539 7.70573 10.539 8.03 10.7416L11 12.5979V3H4Z'
+        fill='currentColor'
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        strokeWidth={strokeWidth}></path>
+    </svg>
+  );
+};
+
+export const NavigationIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      viewBox='0 0 15 15'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      height='14'
+      width={size || width}
+      {...props}>
+      <path
+        d='M6 3.5C6 2.67157 6.67157 2 7.5 2C8.32843 2 9 2.67157 9 3.5C9 4.32843 8.32843 5 7.5 5C6.67157 5 6 4.32843 6 3.5ZM8 5.94999C9.14112 5.71836 10 4.70948 10 3.5C10 2.11929 8.88071 1 7.5 1C6.11929 1 5 2.11929 5 3.5C5 4.70948 5.85888 5.71836 7 5.94999V13.5C7 13.7761 7.22386 14 7.5 14C7.77614 14 8 13.7761 8 13.5V5.94999Z'
+        fill='currentColor'
+        fill-rule='evenodd'
+        clip-rule='evenodd'></path>
+    </svg>
+  );
+};
 
 export const TwitterIcon: React.FC<IconSvgProps> = ({
   size = 24,
