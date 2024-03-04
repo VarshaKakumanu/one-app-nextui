@@ -9,7 +9,7 @@ import { Chip } from "@nextui-org/chip";
 export default function Cardcomponent() {
   const list = [
     {
-      title: "Orange",
+      title: "3039 Shrine Place",
       img: "/mocks/mock1.jpeg",
       price: "$5.50",
     },
@@ -61,7 +61,7 @@ export default function Cardcomponent() {
           isPressable
           onPress={() => console.log("item pressed")}>
           <CardHeader className='absolute z-20 -top-2 right-1 flex justify-between '>
-            <Chip radius='sm'>Acme camera</Chip>
+            <Chip radius='sm'>$1700/month</Chip>
 
             <Button
               isIconOnly
@@ -75,17 +75,17 @@ export default function Cardcomponent() {
               />
             </Button>
           </CardHeader>
-          <CardBody className='overflow-visible p-0'>
+          <CardBody className='overflow-visible p-0 '>
             <Image
               shadow='sm'
               radius='lg'
               width='100%'
               alt={item.title}
-              className='w-full object-cover h-[140px]'
-              src='/mocks/mock1.jpeg'
+              className='w-full object-cover h-[140px] rounded-b-none'
+              src={item.img}
             />
           </CardBody>
-          <CardFooter className='text-small grid grid-cols-2 grid-flow-rows justify-start gap-1.5'>
+          <CardFooter className='text-small grid grid-cols-2 grid-flow-rows w-full justify-start gap-1.5'>
             <p className='flex justify-start items-center'>
               <b>{item.title}</b>
             </p>
@@ -93,11 +93,11 @@ export default function Cardcomponent() {
               <NavigationIcon />
               0.7min
             </p>
-            <p className='flex text-default-500 justify-start items-center'>
-              {item.price}
+            <p className='flex text-xs justify-start items-center'>
+              June 2023 - May 2024
             </p>
 
-            <p className='flex justify-end items-center'>322337</p>
+            <p className='flex justify-end items-center'>3B2B</p>
           </CardFooter>
         </Card>
       ))}
