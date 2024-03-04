@@ -1,3 +1,4 @@
+
 "use client";
 import React from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
@@ -9,51 +10,91 @@ import { Chip } from "@nextui-org/chip";
 export default function Cardcomponent() {
   const list = [
     {
-      title: "Orange",
+      address: "1450 McClintock Ave",
       img: "/mocks/mock1.jpeg",
-      price: "$5.50",
+      price: "$1700/month",
+      distance: 0.3,
+      bedroom: 2,
+      bath: 1,
+      leasingDate: "June 2023 - May 2024",
+      tags: ["Near USC", "Pet Friendly"]
     },
     {
-      title: "Tangerine",
+      address: "2901 S Figueroa St, Los Angeles, CA",
       img: "/mocks/mock2.jpeg",
-      price: "$3.00",
+      price: "$2100/month",
+      distance: 0.5,
+      bedroom: 3,
+      bath: 2,
+      leasingDate: "June 2023 - May 2024",
+      tags: ["Near USC", "Newly Renovated"]
     },
     {
-      title: "Raspberry",
+      address: "3335 S Hoover St, Los Angeles, CA",
       img: "/mocks/mock3.jpeg",
-      price: "$10.00",
+      price: "$2500/month",
+      distance: 0.8,
+      bedroom: 3,
+      bath: 2,
+      leasingDate: "May 2023 - August 2023",
+      tags: ["Summer Lease", "Garage Parking"]
     },
     {
-      title: "Lemon",
+      address: "1234 W 30th St, Los Angeles, CA",
       img: "/mocks/mock4.jpeg",
-      price: "$5.30",
+      price: "$1900/month",
+      distance: 0.2,
+      bedroom: 2,
+      bath: 2,
+      leasingDate: "June 2023 - May 2024",
+      tags: ["Walk to USC", "Pool Access"]
     },
     {
-      title: "Avocado",
+      address: "2724 Ellendale Pl, Los Angeles, CA",
       img: "/mocks/mock5.jpeg",
-      price: "$15.70",
+      price: "$2200/month",
+      distance: 0.4,
+      bedroom: 2,
+      bath: 2,
+      leasingDate: "June 2023 - May 2024",
+      tags: ["Close to Campus", "High-Speed Internet"]
     },
     {
-      title: "Lemon 2",
+      address: "870 W Adams Blvd, Los Angeles, CA",
       img: "/mocks/mock6.jpeg",
-      price: "$8.00",
+      price: "$1800/month",
+      distance: 0.6,
+      bedroom: 1,
+      bath: 1,
+      leasingDate: "May 2023 - August 2023",
+      tags: ["Summer Lease", "Fully Furnished"]
     },
     {
-      title: "Banana",
+      address: "3584 S Figueroa St, Los Angeles, CA",
       img: "/mocks/mock7.jpeg",
-      price: "$7.50",
+      price: "$2600/month",
+      distance: 0.7,
+      bedroom: 3,
+      bath: 2,
+      leasingDate: "June 2023 - May 2024",
+      tags: ["Near USC", "New Appliances"]
     },
     {
-      title: "Watermelon",
+      address: "1100 W 27th St, Los Angeles, CA",
       img: "/mocks/mock8.jpeg",
-      price: "$12.20",
-    },
+      price: "$2000/month",
+      distance: 0.25,
+      bedroom: 2,
+      bath: 1,
+      leasingDate: "June 2023 - May 2024",
+      tags: ["Quiet Neighborhood", "Spacious"]
+    }
   ];
 
   const [liked, setLiked] = React.useState(false);
 
   return (
-    <div className='gap-3 grid grid-cols-2 sm:grid-cols-4'>
+    <div className='gap-4 grid grid-cols-2 sm:grid-cols-4'>
       {list.map((item, index) => (
         <Card
           shadow='sm'
@@ -61,13 +102,14 @@ export default function Cardcomponent() {
           isPressable
           onPress={() => console.log("item pressed")}>
           <CardHeader className='absolute z-20 -top-2 right-1 flex justify-between '>
-            <Chip radius='sm'>Acme camera</Chip>
+            <Chip color="primary" style={{ backgroundColor: '#2D3648', color: 'white' }} radius='sm'>{item.price}</Chip>
 
             <Button
               isIconOnly
-              className='data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2 mt-3'
+              className='data-[hover]:bg-foreground/5 -translate-y-2 translate-x-2 mt-3 '
               radius='full'
               variant='faded'
+              key = 'index'
               onPress={() => setLiked((v) => !v)}>
               <HeartIcon
                 className={liked ? "[&>path]:stroke-transparent" : ""}
@@ -80,25 +122,34 @@ export default function Cardcomponent() {
               shadow='sm'
               radius='lg'
               width='100%'
-              alt={item.title}
+              alt={item.address}
               className='w-full object-cover h-[140px]'
-              src='/mocks/mock1.jpeg'
+              src={item.img}
             />
           </CardBody>
           <CardFooter className='text-small grid grid-cols-2 grid-flow-rows justify-start gap-1.5'>
-            <p className='flex justify-start items-center'>
-              <b>{item.title}</b>
-            </p>
-            <p className='flex justify-end items-center'>
-              <NavigationIcon />
-              0.7min
-            </p>
-            <p className='flex text-default-500 justify-start items-center'>
-              {item.price}
+            {/* Address at the top with bold styling */}
+            <p className='flex justify-start items-center col-span-2 font-bold'>
+              {item.address}
             </p>
 
-            <p className='flex justify-end items-center'>322337</p>
+            {/* Beds and baths information in gray color where the address was */}
+            <p className='flex text-default-500 justify-start items-center'>
+              {item.bedroom}B{item.bath}B
+            </p>
+
+            {/* Distance remains the same */}
+            <p className='flex justify-end items-center'>
+              <NavigationIcon />
+              {item.distance} mi
+            </p>
+
+            {/* Leasing date remains the same */}
+            <p className='flex text-default-400 justify-start items-center col-span-2'>
+              {item.leasingDate}
+            </p>
           </CardFooter>
+
         </Card>
       ))}
     </div>
