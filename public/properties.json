@@ -1,0 +1,163 @@
+[
+    {
+    "address": "3039 Shrine Place",
+    "img": "/mocks/mock1.jpeg",
+    "price": "$1700/month",
+    "distance": 0.3,
+    "bedroom": 2,
+    "bath": 1,
+    "leasingDate": "June 2023 - May 2024",
+    "tags": ["Near USC", "Pet Friendly"]
+    },
+    {
+    "address": "2901 S Figueroa St",
+    "img": "/mocks/mock2.jpeg",
+    "price": "$2100/month",
+    "distance": 0.5,
+    "bedroom": 3,
+    "bath": 2,
+    "leasingDate": "June 2023 - May 2024",
+    "tags": ["Near USC", "Newly Renovated"]
+    },
+    {
+    "address": "3335 S Hoover St",
+    "img": "/mocks/mock3.jpeg",
+    "price": "$2500/month",
+    "distance": 0.8,
+    "bedroom": 3,
+    "bath": 2,
+    "leasingDate": "May 2023 - August 2023",
+    "tags": ["Summer Lease", "Garage Parking"]
+    },
+    {
+    "address": "1234 W 30th St",
+    "img": "/mocks/mock4.jpeg",
+    "price": "$1900/month",
+    "distance": 0.2,
+    "bedroom": 2,
+    "bath": 2,
+    "leasingDate": "June 2023 - May 2024",
+    "tags": ["Walk to USC", "Pool Access"]
+    },
+    {
+    "address": "2724 Ellendale Pl",
+    "img": "/mocks/mock5.jpeg",
+    "price": "$2200/month",
+    "distance": 0.4,
+    "bedroom": 2,
+    "bath": 2,
+    "leasingDate": "June 2023 - May 2024",
+    "tags": ["Close to Campus", "High-Speed Internet"]
+    },
+    {
+    "address": "870 W Adams Blvd",
+    "img": "/mocks/mock6.jpeg",
+    "price": "$1800/month",
+    "distance": 0.6,
+    "bedroom": 1,
+    "bath": 1,
+    "leasingDate": "May 2023 - August 2023",
+    "tags": ["Summer Lease", "Fully Furnished"]
+    },
+    {
+    "address": "3584 S Figueroa St",
+    "img": "/mocks/mock7.jpeg",
+    "price": "$2600/month",
+    "distance": 0.7,
+    "bedroom": 3,
+    "bath": 2,
+    "leasingDate": "June 2023 - May 2024",
+    "tags": ["Near USC", "New Appliances"]
+    },
+    {
+    "address": "1100 W 27th St",
+    "img": "/mocks/mock8.jpeg",
+    "price": "$2000/month",
+    "distance": 0.25,
+    "bedroom": 2,
+    "bath": 1,
+    "leasingDate": "June 2023 - May 2024",
+    "tags": ["Quiet Neighborhood", "Spacious"]
+    },
+    {
+      "address": "1523 W Adams Blvd",
+      "img": "/mocks/mock9.jpeg",
+      "price": "$2700/month",
+      "distance": 0.75,
+      "bedroom": 2,
+      "bath": 2,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Close to Campus", "Pet Friendly"]
+    },
+    {
+      "address": "1842 S Hoover St",
+      "img": "/mocks/mock10.jpeg",
+      "price": "$2800/month",
+      "distance": 0.8,
+      "bedroom": 3,
+      "bath": 2,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Close to Campus", "Newly Renovated"]
+    },
+    {
+      "address": "2678 Ellendale Pl",
+      "img": "/mocks/mock11.jpeg",
+      "price": "$2900/month",
+      "distance": 0.85,
+      "bedroom": 2,
+      "bath": 1,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Near USC", "Pet Friendly"]
+    },
+    {
+      "address": "3489 Shrine Place",
+      "img": "/mocks/mock12.jpeg",
+      "price": "$3000/month",
+      "distance": 0.9,
+      "bedroom": 3,
+      "bath": 2,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Close to Campus", "Newly Renovated"]
+    },
+    {
+      "address": "3921 S Figueroa St",
+      "img": "/mocks/mock13.jpeg",
+      "price": "$3100/month",
+      "distance": 0.95,
+      "bedroom": 2,
+      "bath": 2,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Close to Campus", "Pet Friendly"]
+    },
+    {
+      "address": "1230 W 30th St",
+      "img": "/mocks/mock14.jpeg",
+      "price": "$3200/month",
+      "distance": 1.0,
+      "bedroom": 3,
+      "bath": 1,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Close to Campus", "Newly Renovated"]
+    },
+    {
+      "address": "870 W 28th St",
+      "img": "/mocks/mock15.jpeg",
+      "price": "$3300/month",
+      "distance": 1.05,
+      "bedroom": 2,
+      "bath": 2,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Near USC", "Pet Friendly"]
+    },
+    {
+      "address": "3100 S Hoover St",
+      "img": "/mocks/mock16.jpeg",
+      "price": "$3400/month",
+      "distance": 1.1,
+      "bedroom": 3,
+      "bath": 2,
+      "leasingDate": "June 2023 - May 2024",
+      "tags": ["Close to Campus", "Newly Renovated"]
+    }
+  ]
+  

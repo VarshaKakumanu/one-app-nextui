@@ -45,7 +45,7 @@ export default function RootLayout({
               {children}
             </main>
             <div>
-              <p> \n </p>
+              <br></br>
             </div>
             <footer className='max-w-7xl w-full contents items-center'>
               <Footer />

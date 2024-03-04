@@ -1,97 +1,34 @@
 
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { HeartIcon, HeartFilledIcon, NavigationIcon, BookmarkIcon, BookmarkFilledIcon } from "./icons";
 import { Chip } from "@nextui-org/chip";
 
-export default function Cardcomponent() {
-  const list = [
-    {
-      address: "3039 Shrine Place",
-      img: "/mocks/mock1.jpeg",
-      price: "$1700/month",
-      distance: 0.3,
-      bedroom: 2,
-      bath: 1,
-      leasingDate: "June 2023 - May 2024",
-      tags: ["Near USC", "Pet Friendly"]
-    },
-    {
-      address: "2901 S Figueroa St",
-      img: "/mocks/mock2.jpeg",
-      price: "$2100/month",
-      distance: 0.5,
-      bedroom: 3,
-      bath: 2,
-      leasingDate: "June 2023 - May 2024",
-      tags: ["Near USC", "Newly Renovated"]
-    },
-    {
-      address: "3335 S Hoover St",
-      img: "/mocks/mock3.jpeg",
-      price: "$2500/month",
-      distance: 0.8,
-      bedroom: 3,
-      bath: 2,
-      leasingDate: "May 2023 - August 2023",
-      tags: ["Summer Lease", "Garage Parking"]
-    },
-    {
-      address: "1234 W 30th St",
-      img: "/mocks/mock4.jpeg",
-      price: "$1900/month",
-      distance: 0.2,
-      bedroom: 2,
-      bath: 2,
-      leasingDate: "June 2023 - May 2024",
-      tags: ["Walk to USC", "Pool Access"]
-    },
-    {
-      address: "2724 Ellendale Pl",
-      img: "/mocks/mock5.jpeg",
-      price: "$2200/month",
-      distance: 0.4,
-      bedroom: 2,
-      bath: 2,
-      leasingDate: "June 2023 - May 2024",
-      tags: ["Close to Campus", "High-Speed Internet"]
-    },
-    {
-      address: "870 W Adams Blvd",
-      img: "/mocks/mock6.jpeg",
-      price: "$1800/month",
-      distance: 0.6,
-      bedroom: 1,
-      bath: 1,
-      leasingDate: "May 2023 - August 2023",
-      tags: ["Summer Lease", "Fully Furnished"]
-    },
-    {
-      address: "3584 S Figueroa St",
-      img: "/mocks/mock7.jpeg",
-      price: "$2600/month",
-      distance: 0.7,
-      bedroom: 3,
-      bath: 2,
-      leasingDate: "June 2023 - May 2024",
-      tags: ["Near USC", "New Appliances"]
-    },
-    {
-      address: "1100 W 27th St",
-      img: "/mocks/mock8.jpeg",
-      price: "$2000/month",
-      distance: 0.25,
-      bedroom: 2,
-      bath: 1,
-      leasingDate: "June 2023 - May 2024",
-      tags: ["Quiet Neighborhood", "Spacious"]
-    }
-  ];
+interface Property {
+  address: string;
+  img: string;
+  price: string;
+  distance: number;
+  bedroom: number;
+  bath: number;
+  leasingDate: string;
+  tags: string[];
+}
 
+export default function Cardcomponent() {
+
+  const [list, setList] = useState<Property[]>([]);
   const [liked, setLiked] = React.useState({});
+
+  useEffect(() => {
+    fetch("/properties.json")
+      .then(response => response.json())
+      .then(data => setList(data))
+      .catch(error => console.error("Error loading properties:", error));
+  }, []);
 
   return (
     <div className='gap-4 grid grid-cols-2 sm:grid-cols-4'>
@@ -135,15 +72,9 @@ export default function Cardcomponent() {
               }}
             >
               {liked[item.address] ? (
-                <BookmarkFilledIcon
-                  strokeWidth={1.5}
-                  fontSize={20} // Adjust stroke width as needed for filled icon
-                />
+                <BookmarkFilledIcon/>
               ) : (
-                <BookmarkIcon
-                  size={20}
-                  strokeWidth={2} // Adjust stroke width as needed for outlined icon
-                />
+                <BookmarkIcon/>
               )}
             </Button>
 
@@ -151,11 +82,12 @@ export default function Cardcomponent() {
           <CardBody className='overflow-visible p-0 '>
             <Image
               shadow='sm'
-              radius='lg'
+              radius='xl'
               width='100%'
-              alt={item.address}
+              height='100%'
               className='w-full object-cover h-[140px]'
               src={item.img}
+              
             />
           </CardBody>
           <CardFooter className='text-small grid grid-cols-3 items-center gap-1.5'>
