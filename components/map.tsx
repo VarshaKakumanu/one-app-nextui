@@ -31,8 +31,43 @@ const Map: FunctionComponent<MapProps> = ({ longitude, latitude, zoom }) => {
         center: [longitude, latitude], // Specify the initial map center coordinates
         zoom: zoom, // Specify the initial zoom level
       });
+
+      initializeMap.on("load", function () {
+        // Add marker
+        new mapboxgl.Marker()
+          .setLngLat([longitude, latitude])
+          .addTo(initializeMap);
+
+        // Add compass
+        initializeMap.addControl(new mapboxgl.NavigationControl());
+
+        // Add layer
+        initializeMap.addLayer({
+          id: "points",
+          type: "symbol",
+          source: {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: [
+                {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [longitude, latitude],
+                  },
+                  properties: {
+                    name: "My Point",
+                    description: "This is a point I added to my map.",
+                  },
+                },
+              ],
+            },
+          },
+        });
+      });
+
       setMap(initializeMap);
-      // Optionally, you can store the map instance in a state or ref if needed
     }
   }, [isClient]); // Depend on isClient and map props
 
