@@ -137,7 +137,7 @@ export default function Cardcomponent() {
               {liked[item.address] ? (
                 <BookmarkFilledIcon
                   strokeWidth={1.5}
-                  size={20} // Adjust stroke width as needed for filled icon
+                  fontSize={20} // Adjust stroke width as needed for filled icon
                 />
               ) : (
                 <BookmarkIcon
