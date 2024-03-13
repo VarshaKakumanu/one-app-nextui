@@ -4,6 +4,7 @@ import Map from "@/components/map";
 import { title } from "@/components/primitives";
 import { Button } from "@nextui-org/button";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import { Checkbox } from "@nextui-org/checkbox";
 import { Input } from "@nextui-org/input";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Tab, Tabs } from "@nextui-org/tabs";
@@ -190,6 +191,7 @@ export default function AboutPage() {
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='flex flex-col gap-2'>
                       {/* Register email input */}
+                      <Checkbox defaultSelected>Option</Checkbox>
                       <Input
                         isClearable
                         type='email'
