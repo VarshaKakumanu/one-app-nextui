@@ -10,7 +10,7 @@ export const siteConfig = {
     // },
     {
       label: "Lease",
-      href: "/about",
+      href: "/lease",
     },
     {
       label: "Apply",
