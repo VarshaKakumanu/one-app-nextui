@@ -272,7 +272,7 @@ export default function AboutPage() {
 
                 {/* Submit button */}
                 <Button type="submit" color="default" variant="ghost" bordered className="mt-4">
-                  Add to My OneApp
+                  Add to my OneApp
                 </Button>
               </form>
             </Card>
