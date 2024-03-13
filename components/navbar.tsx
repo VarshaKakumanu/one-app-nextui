@@ -22,6 +22,13 @@ import { SearchIcon } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
 import { Avatar } from "@nextui-org/avatar";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/button";
 
 export const Navbar = () => {
   const searchInput = (
