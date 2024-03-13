@@ -114,8 +114,8 @@ export default function AboutPage() {
                 key={image.id}
                 type='button'
                 onClick={() => handleImageClick(image.imageUrl)}
-                className={`relative w-full h-full overflow-hidden rounded-xl border-2 ${
-                  mainImage === image.imageUrl ? 'border-gray-900' : 'border-transparent'
+                className={`relative w-full h-full overflow-hidden rounded-xl border-2 transition-transform duration-300 ${
+                  mainImage === image.imageUrl ? 'border-teal-900 scale-105' : 'border-transparent'
                 }`}
                 style={{
                   backgroundImage: `url(${image.imageUrl})`,
