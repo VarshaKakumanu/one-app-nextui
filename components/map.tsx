@@ -28,14 +28,14 @@ const Map: FunctionComponent<MapProps> = ({ longitude, latitude, zoom }) => {
       const initializeMap = new mapboxgl.Map({
         container: "mapContainer", // Use the container ID
         style: "mapbox://styles/mapbox/streets-v11", // Specify the map style
-        center: [longitude, latitude], // Specify the initial map center coordinates
-        zoom: zoom, // Specify the initial zoom level
+        center: [-118.2858579, 34.0218689], // Specify the initial map center coordinates
+        zoom: 15, // Specify the initial zoom level
       });
 
       initializeMap.on("load", function () {
         // Add marker
         new mapboxgl.Marker()
-          .setLngLat([longitude, latitude])
+          .setLngLat([-118.2858579, 34.0218689])
           .addTo(initializeMap);
 
         // Add compass
@@ -54,7 +54,7 @@ const Map: FunctionComponent<MapProps> = ({ longitude, latitude, zoom }) => {
                   type: "Feature",
                   geometry: {
                     type: "Point",
-                    coordinates: [longitude, latitude],
+                    coordinates: [-118.2858579, 34.0218689],
                   },
                   properties: {
                     name: "My Point",
