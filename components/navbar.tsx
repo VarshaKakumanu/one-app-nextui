@@ -53,7 +53,7 @@ export const Navbar = () => {
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
           <NextLink className='flex justify-start items-center gap-1' href='/'>
             <Logo />
-            <p className='font-bold text-inherit'>One-App</p>
+            <p className='font-bold text-inherit'>OneApp Housing</p>
           </NextLink>
         </NavbarBrand>
         <ul className='hidden lg:flex gap-4 justify-start ml-2'>
@@ -81,7 +81,7 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem>
-          <Avatar name='Adhi' />
+          <Avatar name='AS' />
         </NavbarItem>
       </NavbarContent>
 
