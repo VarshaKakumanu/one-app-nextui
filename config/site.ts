@@ -23,6 +23,16 @@ export const siteConfig = {
       href: "/logout",
     },
   ],
+  footerItems: [
+    {
+      label: "Privacy Policy",
+      href: "/privacypolicy",
+    },
+    {
+      label: "Logout",
+      href: "/logout",
+    },
+  ],
   links: {
     github: "https://github.com/nextui-org/nextui",
     twitter: "https://twitter.com/getnextui",
