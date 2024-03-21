@@ -61,6 +61,8 @@ export default function Cardcomponent() {
           isPressable
           onPress={() => console.log("item pressed")}>
           <CardHeader className='absolute z-20 -top-2 right-1 flex justify-between '>
+            {/* <Chip radius='sm'>$1700/month</Chip>
+             */}
             <Chip radius='sm'>$1700/month</Chip>
 
             <Button
