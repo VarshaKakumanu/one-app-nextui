@@ -1,19 +1,20 @@
+import { Card, CardBody } from "@nextui-org/card";
+import { Tab, Tabs } from "@nextui-org/tabs";
 import React from "react";
 
 const SideNavbar = () => {
   return (
     <div>
-      {" "}
-      <div className='flex flex-1 bg-gray-50'>
+      <div className='flex flex-1 rounded-xl bg-gray-50'>
         <div className='hidden md:flex md:w-64 md:flex-col'>
-          <div className='flex flex-col flex-grow pt-5 overflow-y-auto bg-white'>
+          <div className='flex flex-col flex-grow p-2 rounded-xl overflow-y-auto bg-white'>
             <div className='flex flex-col flex-1  mt-6'>
               <div className='space-y-4'>
                 <nav className='flex-1 '>
                   <a
                     href='#'
                     title=''
-                    className='flex items-center px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 bg-indigo-600 rounded-lg group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 bg-slate-600 rounded-lg group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4 text-white'
                       xmlns='http://www.w3.org/2000/svg'
@@ -32,7 +33,7 @@ const SideNavbar = () => {
 
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
@@ -51,7 +52,7 @@ const SideNavbar = () => {
 
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200  text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
@@ -70,7 +71,7 @@ const SideNavbar = () => {
 
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200  text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
@@ -106,7 +107,7 @@ const SideNavbar = () => {
                 <nav className='flex-1 space-y-2'>
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200  text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
@@ -125,7 +126,7 @@ const SideNavbar = () => {
 
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200  text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
@@ -144,7 +145,7 @@ const SideNavbar = () => {
 
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200  text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
@@ -180,7 +181,7 @@ const SideNavbar = () => {
                 <nav className='flex-1 space-y-2'>
                   <a
                     href='#'
-                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200 text-gray-900 hover:text-white rounded-lg hover:bg-indigo-600 group'>
+                    className='flex items-center px-4 py-2.5 text-sm font-medium transition-all duration-200  text-gray-900 hover:text-slate-600 rounded-lg hover:bg-slate-300 group'>
                     <svg
                       className='flex-shrink-0 w-5 h-5 mr-4'
                       xmlns='http://www.w3.org/2000/svg'
