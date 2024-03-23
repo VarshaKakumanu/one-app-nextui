@@ -203,7 +203,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-            <Accordion defaultExpandedKeys={["1", "2", "3"]}>
+            <Accordion defaultExpandedKeys={["1", "2", "3"]} selectionMode="multiple">
               <AccordionItem title="Property Info" key={1}>
                 <p className="text-left">
                   This charming property offers a spacious living room with natural light, a modern kitchen equipped with the latest appliances, and a comfortable dining area perfect for entertaining guests. Each bedroom features ample closet space and a serene environment for relaxation. 
