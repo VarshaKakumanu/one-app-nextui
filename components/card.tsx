@@ -1,10 +1,9 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
-import { HeartIcon, HeartFilledIcon, NavigationIcon, BookmarkIcon, BookmarkFilledIcon } from "./icons";
+import { NavigationIcon, BookmarkIcon, BookmarkFilledIcon } from "./icons";
 import { Chip } from "@nextui-org/chip";
 
 interface Property {
@@ -19,15 +18,14 @@ interface Property {
 }
 
 export default function Cardcomponent() {
-
   const [list, setList] = useState<Property[]>([]);
   const [liked, setLiked] = React.useState({});
 
   useEffect(() => {
     fetch("/properties.json")
-      .then(response => response.json())
-      .then(data => setList(data))
-      .catch(error => console.error("Error loading properties:", error));
+      .then((response) => response.json())
+      .then((data) => setList(data))
+      .catch((error) => console.error("Error loading properties:", error));
   }, []);
 
   return (
@@ -39,45 +37,43 @@ export default function Cardcomponent() {
           isPressable
           onPress={() => console.log("item pressed")}>
           <CardHeader className='absolute z-20 -top-2 right-1 flex justify-between '>
-            <Chip radius='sm' radius='sm' style={{ backgroundColor: '#2D3648', color: 'white' }}>{item.price}</Chip>
+            <Chip
+              radius='sm'
+              style={{ backgroundColor: "#2D3648", color: "white" }}>
+              {item.price}
+            </Chip>
 
             <Button
-              variant="solid"
-              color="white"
+              variant='solid'
+              color='white'
               isIconOnly
               css={{
-                mt: '$3',
-                transform: 'translateY(-$2) translateX($2)',
-                background: 'none', // Ensures no background color
-                border: 'none', // Ensures no border
+                mt: "$3",
+                transform: "translateY(-$2) translateX($2)",
+                background: "none", // Ensures no background color
+                border: "none", // Ensures no border
                 padding: 0, // Removes padding
-                borderRadius: '0', // Removes border-radius if any
-                '&:hover': {
-                  background: 'none', // Keeps background on hover also none
-                  opacity: 0.7 // Adds a slight hover effect
+                borderRadius: "0", // Removes border-radius if any
+                "&:hover": {
+                  background: "none", // Keeps background on hover also none
+                  opacity: 0.7, // Adds a slight hover effect
                 },
-                '&:active': {
-                  background: 'none', // Ensures that the active state has no background
+                "&:active": {
+                  background: "none", // Ensures that the active state has no background
                 },
-                '&:focus': {
-                  boxShadow: 'none', // Removes box-shadow on focus
-                }
+                "&:focus": {
+                  boxShadow: "none", // Removes box-shadow on focus
+                },
               }}
               key={index}
               onPress={() => {
-                setLiked(prev => ({
+                setLiked((prev: any) => ({
                   ...prev,
-                  [item.address]: !prev[item.address]
+                  [item.address]: !prev[item.address],
                 }));
-              }}
-            >
-              {liked[item.address] ? (
-                <BookmarkFilledIcon/>
-              ) : (
-                <BookmarkIcon/>
-              )}
+              }}>
+              {[item.address] ? <BookmarkFilledIcon /> : <BookmarkIcon />}
             </Button>
-
           </CardHeader>
           <CardBody className='overflow-visible p-0 '>
             <Image
@@ -87,7 +83,6 @@ export default function Cardcomponent() {
               height='100%'
               className='w-full object-cover h-[140px]'
               src={item.img}
-              
             />
           </CardBody>
           <CardFooter className='text-small grid grid-cols-3 items-center gap-1.5'>
@@ -111,7 +106,6 @@ export default function Cardcomponent() {
               {item.bedroom}B{item.bath}B
             </p>
           </CardFooter>
-
         </Card>
       ))}
     </div>

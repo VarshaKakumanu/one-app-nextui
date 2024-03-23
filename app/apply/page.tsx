@@ -1,9 +1,11 @@
-import { title } from "@/components/primitives";
+import React from "react";
 
-export default function DocsPage() {
-	return (
-		<div>
-			<h1 className={title()}>Docs</h1>
-		</div>
-	);
-}
+const ApplyPage = () => {
+  return (
+    <div className='flex justify-center items-center m-auto'>
+      <div>apply page</div>
+    </div>
+  );
+};
+
+export default ApplyPage;
